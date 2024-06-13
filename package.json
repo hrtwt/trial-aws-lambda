@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --outfile=dist/index.js --bundle --minify --platform=node --target=node20",
+    "pack": "npm run build && zip dist/lambda.zip dist/index.js",
+    "type": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.138",
-    "@types/node": "^20.14.2"
+    "@types/node": "^20.14.2",
+    "typescript": "^5.4.5"
   }
 }
