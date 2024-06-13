@@ -1,0 +1,26 @@
+{
+  "name": "trial-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrtwt/trial-lambda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrtwt/trial-lambda/issues"
+  },
+  "homepage": "https://github.com/hrtwt/trial-lambda#readme",
+  "dependencies": {
+    "esbuild": "^0.21.5"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.138",
+    "@types/node": "^20.14.2"
+  }
+}
