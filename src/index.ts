@@ -24,15 +24,15 @@ export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGat
     }
     const body = JSON.parse(event.body);
 
-    const blob = await fetchAsBuffer(body.url);
-    const hash = sha256hash(blob);
+    const buffer = await fetchAsBuffer(body.url);
+    const hash = sha256hash(buffer);
 
     return {
       statusCode: 200,
       body: JSON.stringify({
         url: body.url,
         hash,
-        size: Buffer.byteLength(blob)
+        size: Buffer.byteLength(buffer)
       }),
     };
   } catch (err: unknown) {
