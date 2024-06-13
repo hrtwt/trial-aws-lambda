@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild src/index.ts --outfile=dist/index.js --bundle --minify --platform=node --target=node20",
-    "pack": "npm run build && zip dist/lambda.zip dist/index.js",
+    "pack": "zip dist/lambda.zip dist/index.js",
     "type": "tsc --noEmit"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hrtwt/trial-lambda#readme",
   "dependencies": {
+    "crypto": "^1.0.1",
     "esbuild": "^0.21.5"
   },
   "devDependencies": {
